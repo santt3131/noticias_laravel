@@ -10,3 +10,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/app/Http/Middleware/*
+/app/Providers/*
+/app/bootstrap/*
+/config
+/public/*
+!public/style.css
+/routes
+!routes/web.php
