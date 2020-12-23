@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NoticiasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   return redirect('/lista_noticias');
+
 });
+
+Route::get('/lista_noticias', [NoticiasController::class,'index']);
+Route::get('lista_noticias/{id}', [NoticiasController::class,'show']);
