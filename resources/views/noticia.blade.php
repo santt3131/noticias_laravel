@@ -11,7 +11,7 @@
             <h3>{{ $news->autor->nombre }}</h3>
             <h3 class="date">{{ $news->fecha_publicacion }}</h3>
             <p class="contenido">
-                {{ $news->contenido }}
+                {!!  nl2br(stripcslashes($news->contenido)) !!}
             </p>
             <p class="img">
                 <img src="{{ $news->url }}" alt="">
